@@ -28,7 +28,7 @@ Synthetically-Generated Datasets
 
 Using synthetic data for Playground competitions allows us to strike a balance between having real-world data (with named features) and ensuring test labels are not publicly available. This allows us to host competitions with more interesting datasets than in the past. While there are still challenges with synthetic data generation, the state-of-the-art is much better now than when we started the Tabular Playground Series two years ago, and that goal is to produce datasets that have far fewer artifacts. Please feel free to give us feedback on the datasets for the different competitions so that we can continue to improve!
 
-🎧 Feature Descriptions:
+ ### Feature Descriptions:
 
 - id – Unique identifier for each podcast episode (not used in modeling).
 
@@ -46,7 +46,7 @@ Using synthetic data for Playground competitions allows us to strike a balance b
 
 - Publication_Time – Time the episode was published (e.g., morning, evening, or exact hour).
 
-Guest_Popularity_percentage – Popularity score of the guest, if present (0–100).
+- Guest_Popularity_percentage – Popularity score of the guest, if present (0–100).
 
 - Number_of_Ads – Count of ads in the episode.
 
@@ -55,11 +55,23 @@ Guest_Popularity_percentage – Popularity score of the guest, if present (0–1
 - Listening_Time_minutes – Target variable: how many minutes users listened to the episode
 
 
-🎯 Primary Task
+ ## Primary Task
 
 - Perform EDA
 - Data cleaning
 - Prediction Target: Listening_Time_minutes
+
+### Tools & Libraries
+
+- matplotlib.pyplot -	Plotting line charts, histograms, bar charts
+- seaborn	Enhanced statistical plots like boxplots, scatterplots, heatmaps
+- sklearn.preprocessing -	Encoding, scaling (StandardScaler, LabelEncoder, OneHotEncoder)
+- sklearn.preprocessing - Encoding, scaling (StandardScaler, LabelEncoder, OneHotEncoder)
+- sklearn.ensemble.RandomForestRegressor - Regression model using bagging
+- xgboost.XGBRegressor -	High-performance gradient boosting model
+- sklearn.linear_model.LinearRegression - Baseline model for regression
+- sklearn.model_selection	- Train-test split, cross-validation, hyperparameter tuning
+- sklearn.metrics	- Evaluation metrics: MSE, RMSE, R², MAE
 
 ### Exploratory Data Analysis (EDA)
 
@@ -103,14 +115,4 @@ Surprisingly, after tuning XGBoost using RandomizedSearchCV, the performance sli
 From this process, I learned that default models can already provide strong baselines, and that tuning doesn’t always guarantee better performance. 
 
 
-### Tools & Libraries
 
-matplotlib.pyplot -	Plotting line charts, histograms, bar charts
-seaborn	Enhanced statistical plots like boxplots, scatterplots, heatmaps
-sklearn.preprocessing -	Encoding, scaling (StandardScaler, LabelEncoder, OneHotEncoder)
-sklearn.preprocessing - Encoding, scaling (StandardScaler, LabelEncoder, OneHotEncoder)
-sklearn.ensemble.RandomForestRegressor - Regression model using bagging
-xgboost.XGBRegressor -	High-performance gradient boosting model
-sklearn.linear_model.LinearRegression - Baseline model for regression
-sklearn.model_selection	- Train-test split, cross-validation, hyperparameter tuning
-sklearn.metrics	- Evaluation metrics: MSE, RMSE, R², MAE
