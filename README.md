@@ -114,5 +114,7 @@ Surprisingly, after tuning XGBoost using RandomizedSearchCV, the performance sli
 
 From this process, I learned that default models can already provide strong baselines, and that tuning doesn’t always guarantee better performance. 
 
+I chose to run and save predictions on the test using the default versions of both XGBoost and Random Forest models. After comparing them to their tuned counterparts, I found that the default XGBoost model performed the best overall.
+
 
 
